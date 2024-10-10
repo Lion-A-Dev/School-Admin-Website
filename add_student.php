@@ -89,12 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </a>
                     </li>
 
-                    <li>
-                        <a href="#">
-                            <span class="material-icons">edit</span>
-                            Edit Student
-                        </a>
-                    </li>
+
 
                     <li>
                         <a href="viewAllStudents.php">
@@ -124,12 +119,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </a>
                     </li>
 
-                    <li>
-                        <a href="#">
-                            <span class="material-icons">edit</span>
-                            Edit Course
-                        </a>
-                    </li>
 
                     <li>
                         <a href="#">
@@ -159,12 +148,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </a>
                     </li>
 
-                    <li>
-                        <a href="#">
-                            <span class="material-icons">edit</span>
-                            Edit Grade
-                        </a>
-                    </li>
+
 
                     <li>
                         <a href="#">

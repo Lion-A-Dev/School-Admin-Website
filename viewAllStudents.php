@@ -15,10 +15,7 @@
 </head>
 
 <body>
-    <div class="search-div">
-        <input class="search" type="text" placeholder="Search ">
-    </div>
-    
+
     <!--Side bar-->
     <input type="checkbox" id="check">
 
@@ -45,12 +42,7 @@
                         </a>
                     </li>
 
-                    <li>
-                        <a href="edit_student.php">
-                            <span class="material-icons">edit</span>
-                            Edit Student
-                        </a>
-                    </li>
+
 
                     <li>
                         <a href="#">
@@ -80,12 +72,7 @@
                         </a>
                     </li>
 
-                    <li>
-                        <a href="#">
-                            <span class="material-icons">edit</span>
-                            Edit Course
-                        </a>
-                    </li>
+
 
                     <li>
                         <a href="#">
@@ -114,12 +101,7 @@
                         </a>
                     </li>
 
-                    <li>
-                        <a href="#">
-                            <span class="material-icons">edit</span>
-                            Edit Grade
-                        </a>
-                    </li>
+
 
                     <li>
                         <a href="#">
@@ -140,9 +122,10 @@
     
     <div class="main">
         <div class="div-table">
+            <form >
             <table class="w3-table w3-striped w3-bordered">
                 <thead>
-                    <tr>
+                    <tr style="background-color: #13786E; color:white;">
                         <th>ID</th>
                         <th>First Name</th>
                         <th>Last Name</th>
@@ -151,6 +134,7 @@
                         <th>Country</th>
                         <th>Phone</th>
                         <th>Major</th>
+                        <th>Edit</th>
                     </tr>
                 </thead>
                 
@@ -178,7 +162,7 @@
                     
                     while($row = $resultSet->fetch_assoc())
                     {
-                        echo "<tr>
+                        echo "<tr style='height:55px'>
                         <td>" . $row["Id"] ."</td>
                         <td>" . $row["Name"] ."</td>
                         <td>" . $row["LastName"] ."</td>
@@ -187,6 +171,12 @@
                         <td>" . $row["Country"] ."</td>
                         <td>" . $row["Phone"] ."</td>
                         <td>" . $row["Major"] ."</td>
+                        <td style='width:75px'>
+                            <form class=linkDiv action='edit_student.php' method='post'>
+                                <input type='hidden' name='id' value='" . $row["Id"] ."'/>
+                                <button type=submit class=btnEdit>Edit</button>
+                            </form>
+                        </td>
                     </tr>";
                     }
                     ?>
@@ -197,6 +187,7 @@
                 </tbody>
                    
         </table>
+            </form>
         </div>
     </div>
     

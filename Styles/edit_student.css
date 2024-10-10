@@ -1,0 +1,134 @@
+main{
+    margin:0;
+    padding:0;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar{
+    z-index: 1;
+}
+
+.student_div{
+    width: 60%;
+    height:90%;
+    background-color: white;
+    border-radius: 10px;
+}
+.student_div h2{
+    display: flex;
+    justify-content: center;
+    width:100%;
+    background-color: #13786E;
+    color: white;
+    border-radius: 5px; 
+    overflow-x: hidden;
+}
+
+
+.student_form{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 80% 10%;
+    height: 100%;
+    gap: 15px;
+}
+
+.persInfo{
+    margin-top: 15px;
+    margin-left: 10px;
+    border-radius: 15px;
+    height: 95%;
+    width: 95%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll;
+    
+}
+
+.coursesInfo{
+    margin-top: 15px;
+    margin-right: 10px;
+    border-radius: 15px;
+    height: 95%;
+    width: 95%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px; /* Adds space between label and input */
+}
+
+form input {
+    width: 100%; /* Input takes full width */
+    padding: 10px; /* Adds padding inside the input for better aesthetics */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Subtle border */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    font-size: 16px;
+}
+
+#edit{
+   position: relative;
+   left: 50px;
+   width: 350px;
+   height: 45px;
+   background-color: #4682B4;
+   color: white;
+   border-radius: 10px;
+   border: none;
+   font-size: 26px;
+   font-weight: bold;
+   font-family: 'Roboto', sans-serif;
+}
+#edit:hover{
+    background-color:#5A9BD4;
+    cursor:pointer;
+}
+
+#delete{
+   position: relative;
+   left: 50px;
+   width: 350px;
+   height: 45px;
+   background-color: red;
+   color: white;
+   border-radius: 10px;
+   border: none;
+   font-size: 26px;
+   font-weight: bold;
+   font-family: 'Roboto', sans-serif;
+}
+#delete:hover{
+    background-color:crimson;
+    cursor:pointer;
+}
+
+
+
+table{
+    border-collapse: collapse;
+    overflow-y: scroll;
+}
+tr:nth-child(even){
+    background-color: lightgray;
+}
+th{
+    padding:0;
+}
+
+table td{
+    text-align: center;
+}
+
+label{
+    position: relative;
+    left: 5px;
+    padding-top: 15px;
+}
