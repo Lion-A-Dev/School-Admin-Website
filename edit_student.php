@@ -48,7 +48,7 @@
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="viewAllStudents.php">
                             <span class="material-icons">list</span>
                             View All Students
                         </a>

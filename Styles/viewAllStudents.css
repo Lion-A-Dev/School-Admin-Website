@@ -20,7 +20,6 @@ body{
 }
 
 .div-table{
-    background-color: white;
     height: 90%;
     width: 95%;
     margin-top: 100px;
@@ -33,13 +32,8 @@ body{
 
 
 .search-div{
-    position: absolute;
-    right: 890px;
-    display: flex;
-    padding: 20px;
-    padding-right: 150px;
-    margin:10px;
-    width: 300px;;
-    z-index: 1;
-    justify-content: flex-start;
+    
+
 }
+
+

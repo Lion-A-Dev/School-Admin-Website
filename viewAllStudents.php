@@ -11,10 +11,7 @@
     <link rel="stylesheet" href="Styles/index.css">
     <link rel="stylesheet" href="Styles/edit.css"></link>
     <link rel="stylesheet" href="Styles/viewAllStudents.css">
-    
-    <!--Search bar-->
-    
-
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
@@ -143,7 +140,7 @@
     
     <div class="main">
         <div class="div-table">
-            <table>
+            <table class="w3-table w3-striped w3-bordered">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -156,6 +153,49 @@
                         <th>Major</th>
                     </tr>
                 </thead>
+                
+                <tbody>
+                    <?php
+                    $serverName = "localhost";
+                    $username = "root";
+                    $password = "Passw0rd";
+                    $database = "db_fproject";
+                    
+                    //Create connetion
+                    $con = new mysqli($serverName, $username, $password, $database);
+                    
+                    if ($con->connect_error) {
+                        die("Connection Failed: " . $con->connect_error);
+                    }
+                    
+                    //read all rows from database table
+                    $sql = "SELECT * FROM student";
+                    $resultSet = $con->query($sql);
+                    
+                    if (!$resultSet) {
+                        die("Invalid query: " . $con->error);
+                    }
+                    
+                    while($row = $resultSet->fetch_assoc())
+                    {
+                        echo "<tr>
+                        <td>" . $row["Id"] ."</td>
+                        <td>" . $row["Name"] ."</td>
+                        <td>" . $row["LastName"] ."</td>
+                        <td>" . $row["Address"] ."</td>
+                        <td>" . $row["City"] ."</td>
+                        <td>" . $row["Country"] ."</td>
+                        <td>" . $row["Phone"] ."</td>
+                        <td>" . $row["Major"] ."</td>
+                    </tr>";
+                    }
+                    ?>
+                    
+                    
+                    
+
+                </tbody>
+                   
         </table>
         </div>
     </div>
