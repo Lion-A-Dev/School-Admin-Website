@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    background: url(../images/cafe.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 150px;
+    height: 100vh;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin: 0;
+
+}
+
+.sidebar {
+    position: fixed;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background: linear-gradient(180deg, #0E564B, #13786E);
+    transition: all .5s ease;
+    opacity: 0.96;
+}
+
+.sidebar header {
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: linear-gradient(180deg, #0A3F38, #0E564B);
+
+    user-select: none;
+}
+
+header a{
+    color: inherit;
+    font-size: 22px;
+    padding-right: 50px;
+}
+
+header a:hover{
+    color: #b48663;
+}
+
+
+a:visited{
+    color: inherit;
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 80px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+
+}
+
+ul li span {
+    padding-right: 15px;
+}
+
+ul li:hover a {
+    padding-left: 50px;
+}
+
+#check {
+    display: none;
+}
+
+label #menu,
+label #close {
+    position: absolute;
+    cursor: pointer;
+    background: #0E564B;
+    border-radius: 3px;
+}
+
+label #menu {
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all .5s ease;
+}
+
+label #close {
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: white;
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+
+#check:checked~.sidebar {
+    left: 0;
+}
+
+#check:checked~label #menu {
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked~label #close {
+    left: 195px;
+}
+
+/* Hide the submenu initially */
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    list-style: none;
+    padding-left: 20px;
+    transition: max-height 0.5s ease-out;
+}
+
+/* When the parent <li> is hovered, expand the submenu */
+li:hover .submenu {
+    max-height: 500px;
+    /* A value higher than the expected submenu height */
+}
+
+
+
+.search-div {
+    height: 30px;
+    width: 250px;
+    padding-left: 350px;
+    padding-top: 35px;
+}
+
+.search {
+    border-radius: 30px;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    padding-left: 15px;
+    border-width: thin;
+    outline: none;
+
+}
+
+.search::placeholder {
+    text-align: left;
+}
+
+
+
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(180deg, #0E564B, #13786E);
+    border: none;
+    width: 73%;
+    height: 25vh;
+    border-radius: 20px;
+    padding: 10px 20px;
+    position: relative;
+    opacity: 0.95;
+}
+
+.welcome p {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.school-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 150px;
+}
+
+.school-icon img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
+
+.welBack {
+    align-self: flex-end;
+    font-size: 28px;
+    padding-bottom: 35px;
+    margin-left: 0;
+}
+
+.date {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 14px;
+}
+
+li a:hover {
+    color: #b48663;
+}
+
+.analytics {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(180deg, #0E564B, #13786E);
+    border: none;
+    width: 73%;
+    height: 40vh;
+    border-radius: 20px;
+    padding: 10px 20px;
+    position: relative;
+    opacity: 0.95;
+}
+
+.analytics p {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.analyticsTag {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 16px;
+}
+
+.block {
+    background-color: #FFF;
+    height: 75%;
+    width: 20%;
+    border-radius: 30px;
+
+}
