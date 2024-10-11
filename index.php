@@ -39,12 +39,6 @@
                         </a>
                     </li>
 
-                    <li>
-                        <a href="edit_student.php">
-                            <span class="material-icons">edit</span>
-                            Edit Student
-                        </a>
-                    </li>
 
                     <li>
                         <a href="viewAllStudents.php">

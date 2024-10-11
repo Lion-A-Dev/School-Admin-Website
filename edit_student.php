@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -121,9 +122,10 @@
     <main class="">
         <div class="student_div">
             <h2>Edit Student Information</h2>
-            <form class="student_form" method="post" actio="edit_student.php">
+            <form class="student_form" method="post" action="update_student.php">
                 <?php
                     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'])){
+                        global $student_id;
                         $student_id = $_POST['id'];
                         $serverName = "localhost";
                         $username = "root";
@@ -164,7 +166,6 @@
                                      $telephone = $row["Phone"];
                                      $majeur = $row["Major"];
                                 }
-          
                     }
 
                 ?>
@@ -231,11 +232,13 @@
                         <tbody>
                             <?php
                             if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'])){
+                                global $student_id;
                                 $student_id = $_POST['id'];
                                 $serverName = "localhost";
                                 $username = "root";
                                 $password = "Passw0rd";
                                 $database = "db_fproject";
+                                
                                 
                             
                                 //Create connetion
@@ -274,13 +277,19 @@
                         </tbody>
                     </table>
                 </div>
+                    
                 
-                <button id="edit" type="submit"> Edit </button>
+                    <input type='hidden' name='id' value="<?=$student_id?>"/>
+                    <button id="edit" type="submit"> Edit </button>
+            </form>
+            
+            <form class="delete" method="post" action="delete_student.php">
+                <input type='hidden' name='id' value="<?=$student_id?>"/>
                 <button id="delete" type="submit">Delete Student</button>
             </form>
+            
         </div>
     </main>
-    
 </body>
 
 </html>

@@ -28,6 +28,12 @@ main{
     overflow-x: hidden;
 }
 
+.student_div .delete{
+    position:relative;
+    bottom: 118px;
+    left: 450px;
+}
+
 
 .student_form{
     display:grid;
